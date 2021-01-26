@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_outer_classname = "ExampleProto";
+option java_package = "io.github.rura6502.basic";
+
+package grpc.sample; 
+
+message ExampleProtoRequest {
+  string userId = 1;
+  string message = 2;
+}
+
+message ExampleProtoResponse {
+  string message = 1;
+}
+
+service ExampleService {
+  rpc exampleCall (ExampleProtoRequest) returns (ExampleProtoResponse) {
+  }
+}
