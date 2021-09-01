@@ -1,0 +1,1 @@
+Simple Kafka java client using testcontainers.
